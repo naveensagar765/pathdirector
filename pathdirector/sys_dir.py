@@ -45,3 +45,18 @@ def get_pictures_dir():
         picture_dir = Path.home() / 'Pictures'
 
     return picture_dir
+
+
+def get_videos_dir():
+    """
+        Get the directory path for a user's Videos based on the OS.
+
+        Returns:
+            Path: The path to the Videos directory.
+    """
+    if os.name == 'nt':  # For Windows
+        videos_dir = Path(os.environ['USERPROFILE']) / 'Videos'
+    else:  # For Unix-based systems
+        videos_dir = Path.home() / 'Videos'
+
+    return videos_dir
