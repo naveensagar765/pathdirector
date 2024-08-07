@@ -37,6 +37,7 @@ You can get the paths for various directories as follows:
 
 ```python
 # Get the application data path
+
 app_data_path = get_application_dir(appname='appname', roaming=False)
 print(f"Application Data Path: {app_data_path}")
 
